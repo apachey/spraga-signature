@@ -911,7 +911,7 @@ svg {
 
   #spraga-signature-tool .sst-theme-strip {
     display: grid;
-    grid-template-columns: repeat(5, minmax(46px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 6px;
   }
 
@@ -1158,7 +1158,7 @@ svg {
     #spraga-signature-tool .sst-prefix-input,
     #spraga-signature-tool .sst-rich-editor { font-size: 16px; }
     #spraga-signature-tool .sst-format-button { width: 44px; height: 40px; }
-    #spraga-signature-tool .sst-theme-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    #spraga-signature-tool .sst-theme-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); }
     #spraga-signature-tool .sst-theme-button,
     #spraga-signature-tool .sst-invert-button { min-height: 58px; }
     #spraga-signature-tool .sst-preview-stage { min-height: 190px; padding: 24px 14px; }
@@ -1227,6 +1227,18 @@ svg {
             <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYxIiBoZWlnaHQ9IjMxMSIgdmlld0JveD0iMCAwIDI2MSAzMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMTQuNDMyIDI0LjI3NjhDMTEzLjg2NyAyNC4yNzE5IDExMy4zMDIgMjQuMjg5MyAxMTIuNzM4IDI0LjMzMDVDMTA5LjIzNiAyNC42MTA4IDEwMy42MjIgMjYuMDk4NyAxMDEuNDA4IDI4Ljg5NEM5Ny4zNTk2IDM0LjI1MTIgMTA1LjA4NCAzOC41MDU0IDEwOC4wNzUgNDEuNzMyOUMxMTYuNDE0IDUwLjY5MDkgMTIyLjk0NiA2MS4xODcyIDEyNy43MyA3Mi40MzNDMTMwLjU1IDc5LjA1MiAxMzAuODAxIDg2LjU2NjkgMTM2LjcwMSA5MC45MDI4TDEzMy4yMDggOTQuMzcxNUMxMjkuMDkzIDkyLjE3MDIgMTI1LjEzOCA4OC40Mzg4IDEyMS4wMzIgODUuOTk5NUMxMDcuMTM0IDc3Ljc1NCA5MS4zOTI0IDczLjkwMzYgNzUuMzMzNCA3NS4wNzg2QzU1LjU2MjIgNzYuNTY0NCAzNy4yMDI1IDg1LjkwMTUgMjQuMzU3OCAxMDEuMDA3QzIxLjUwMjEgMTA0LjMwNyAxOS4zMDUgMTA3LjgyOSAxNi45MTU1IDExMS40NTVDLTIwLjQyNjEgMTY4LjE0MSA5LjAxOTgzIDI1MC4yMSA1Ni45ODY4IDI5MS4yNDdDNzIuOTQ3MyAzMDQuODk4IDg4LjM2MTYgMzExLjUyOCAxMDkuMTE1IDMwOS44MjRDMTE3LjE0OSAzMDkuNjM0IDEyNy40OTIgMzA0LjYwNyAxMzUuMTk5IDMwNC45MkMxNTEuNDA3IDMwNS41OCAxNjEuODkzIDMxMC42MTEgMTc4LjQwOSAzMDQuODU3QzIwOC4xMTUgMjk0LjUwNiAyMzEuOTgzIDI2NC45NjggMjQ1LjQ0OSAyMzcuNDkxQzI2MC4zMzUgMjA3LjExNyAyNjYuMjYzIDE2OC43MyAyNTUuNDM5IDEzNi4zOTJDMjQyLjE4NiA5NS45NTY2IDIwMC42MTEgNzAuMjI2OSAxNTkuNTc3IDg2Ljk4ODdDMTUzLjgxOCA4OS4zNDE2IDE0Ny43ODQgOTIuNzQxNyAxNDEuOTMyIDk0LjczNjhMMTQxLjMyNSA5NC45Mzg5TDEzNy4yNyA5MS4wNjc4TDEzOS4zNzIgODguNTMzNkMxNDIuMTUxIDc0LjQ3NzIgMTI2Ljc1NyAzMS45MjMxIDExNC40MzIgMjQuMjc2OFpNNjguNzI0MSAyODAuNjgyQzcwLjcxOSAyODIuMjY4IDcyLjYzNzkgMjgzLjc1OCA3NC41Mjk3IDI4NS40NzVMNzQuNDk0NiAyODYuMTIxQzcyLjYxMTYgMjg1LjAzNCA2OC42Mzg5IDI4My4wOTIgNjguNzI0MSAyODAuNjgyWk0yMjAuMDgzIDI0MS4wN0MyMTguMjk1IDI0NS41MzggMjEyLjQ0MiAyNTQuMTUzIDIwOC41MTcgMjU2LjExNEMyMDkuOTkyIDI1NC4yNDcgMjE5LjExMyAyNDEuNzIxIDIyMC4wODMgMjQxLjA3Wk0yOS41MiAyMDguODM2QzMxLjk0NTQgMjE1LjU5NyAzMy45ODUzIDIyMi4zOTggMzYuODUgMjI5LjAwNkMzNy43NjAyIDIzMS4xMDEgMzguODQwNCAyMzMuNDQ1IDM5LjUyMTkgMjM1LjYwNEwzOS4zOTY5IDIzNS44MjdDMzYuMzc1MiAyMzEuNjQxIDI4LjM0MTQgMjEzLjg2IDI5LjUyIDIwOC44MzZaTTIwMy42NzYgMjA3LjAyM0MyMDMuMzg3IDIxMS41NDMgMjAwLjk3OCAyMjIuMTg0IDE5Ny44MDggMjI1LjE4QzE5OC4xNTcgMjIyLjk3OCAyMDIuNjYyIDIwOC44NTQgMjAzLjY3NiAyMDcuMDIzWk01NC41ODM0IDIwNi4xODlDNTQuODA3NyAyMDguNTk5IDU2LjI1NjIgMjE2LjM4NCA1Ni4wODE1IDIxNy4zODNMNTUuNzAwNiAyMTcuNjIzQzU0LjkyOTUgMjE1LjEzOCA1Mi44MTMzIDIwOC4yMzkgNTQuNTgzNCAyMDYuMTg5Wk0yMzQuNDczIDE5MC40QzIzNC40MDUgMTkzLjkwNSAyMzQuMjY4IDIwMC4zODQgMjMyLjIyNCAyMDMuMzYxQzIzMi4zNjEgMjAwLjU0NyAyMzIuMzg5IDE5MS45ODYgMjM0LjQ3MyAxOTAuNFpNNDYuMTY3NCAxNjEuMzQ1QzQ2LjMwNjIgMTY1LjAyNCA0NC41MzkzIDE3My43NjQgNDMuNzgxNyAxNzcuNUw0My4zMTk4IDE3Ny45MDVDNDMuMjEyMiAxNzIuMzcxIDQzLjU1ODIgMTY2LjM2MiA0Ni4xNjc0IDE2MS4zNDVaTTI4LjM1MyAxNDkuNjY3QzI3Ljg4NjcgMTUyLjE4MSAyNC42NTkyIDE2OC4yNTIgMjMuOTQxOCAxNjkuNjY5QzIzLjYxOSAxNjUuNjgzIDI1LjcyMTMgMTUxLjg3NiAyOC4zNTMgMTQ5LjY2N1pNMjIyLjgwMiAxMjIuNDQ0QzIyOS45NTcgMTI5LjU4NiAyMzkuMzMgMTQ5LjQ3OSAyMzcuODQ2IDE1OS43ODRDMjM2LjgwMyAxNTYuNzI4IDIzNi4zNDMgMTUzLjUxMyAyMzUuNTAxIDE1MC40MDFDMjMzLjU1OSAxNDMuNDExIDIzMC43MTQgMTM2LjcwNCAyMjcuMDM5IDEzMC40NDlDMjI2LjEyNSAxMjguOSAyMjIuNTY0IDEyMy43OSAyMjIuODAyIDEyMi40NDRaTTE2Ni45ODIgMTQyLjA1M0MxNjguNzY1IDE0NC40NTggMTcxLjkzIDE0OS41MzUgMTcxLjYyMiAxNTIuNTgxQzE3MC40NzUgMTUwLjU0NCAxNjYuNTg2IDE0My44MjggMTY2Ljk4MiAxNDIuMDUzWk03MC4xNDU5IDExMC45OTVDNjcuMTI4NyAxMTMuMTUgNjMuNjU0IDExNC44NDMgNjAuODUyIDExNi45ODhDNTguMzYzNyAxMTguODkzIDU0Ljg5MzkgMTIzLjc2MSA1Mi4yODQ2IDEyNS4yNkM1NS45NDMgMTE5LjQ0OSA2My4yNTA5IDExMS40MyA3MC41MjI5IDExMC43MjFMNzAuMTQ1OSAxMTAuOTk1Wk02OS4yNTA0IDg5LjM3MDZDNjcuODQyNiA5MS40Njk0IDY0LjI0NzEgOTEuOTQ2MiA2MS43OTkyIDkyLjQ4MjlDNjMuNjMyOSA5MC40OTkxIDY2LjYyNzggODkuNjI1NiA2OS4yNTA0IDg5LjM3MDZaTTIxMS40NzIgMC4xOTA4NTRDMTkxLjc5OCAtMS42Njk5OSAxNjYuOTA2IDEwLjI4NDEgMTU2LjQ5NSAyNy4wMDYzQzE1MC4xNjYgMzcuMTcxMiAxNDYuNDA3IDQ3LjQ5MzYgMTQ1LjI0NCA1OS40ODY4QzE0NC45NTYgNjIuNDU1NSAxNDUuMDM5IDY1LjUwNDkgMTQ0LjkwOSA2OC40ODU4QzE0NC45NjkgNzIuNDA0NSAxNDIuNDg0IDc2LjY5MiAxNDYuNDk5IDc5LjE5MjhDMTQ3LjY2MSA3OS4wODUyIDE1My4wNDYgNzUuOTk1MyAxNTUuMDg1IDc1LjI1NjNDMTYzLjQyNyA3My41OTQ4IDE3Mi4wMzYgNjkuOTM2MyAxNzkuNDc2IDY1LjkxMjVDMTk3LjAwMiA1Ni4yNTYzIDIxMS41ODggNDIuMDM1OCAyMjEuNjg2IDI0Ljc2MDJDMjMxLjY4NyA3Ljk4OTkzIDIzMS40MzMgMy4zMDEzOCAyMTEuNDcyIDAuMTkwODU0Wk0xODEuMDM2IDUyLjgxNzhDMTc3LjQ4MSA1NS40Mzc4IDE2OS45MjkgNTkuMzk2MSAxNjUuNjg2IDYwLjA0NTNDMTY4Ljg3OSA1Ny45MzU5IDE3Ny40NTggNTMuNDE5NSAxODEuMDM2IDUyLjgxNzhaTTE5My45MjYgNDIuMjQ4NUMxOTIuNDkyIDQ0LjQ5NjggMTkxLjQ3MyA0NS44MDIxIDE4OC42OTMgNDYuMDYzOUMxOTAuMTkxIDQ0LjI0ODIgMTkxLjY5IDQzLjA1NDYgMTkzLjkyNiA0Mi4yNDg1Wk0xOTMuMjg4IDQwLjA3NDZDMTkxLjc2NiA0MC41NDgxIDE4OS45NDQgNDAuODc4MSAxODguMzY3IDQxLjIwOTRMMTg4LjU0OSA0MS4xMzUyTDE4Ni45ODcgNDEuMTIxNUMxODguNzEyIDQwLjA1MTggMTkxLjE3NCAzOS43NzYzIDE5My4yNCAzOS4zNzA1TDE5My4yNDEgMzkuMzcwNUMxOTYuOTY5IDM3LjMzOTQgMjAwLjIwNiAzNS40OTc4IDIwMy44MTkgMzMuMjkwNUMyMDAuMjE2IDM3LjI1NzIgMTk4LjY4MSAzOC43ODkzIDE5My4yODggNDAuMDc0NlpNMTY5LjkxNCAyNi43MzU4QzE2OC44OTEgMjkuODczNyAxNjUuNjM4IDM3LjE5NiAxNjMuMTc0IDM5LjE0OThDMTYzLjkxIDM2LjIzNjUgMTY3LjU1IDI4LjU0NzkgMTY5LjkxNCAyNi43MzU4WiIgZmlsbD0iIzM2NjEzMiIvPgo8L3N2Zz4K" alt="">
             <span class="sst-theme-name">Apple</span>
           </button>
+          <button class="sst-theme-button" type="button" data-theme="mint" aria-pressed="false" style="color:#E20303;background:#D6F6B3;">
+            <img src="assets/mint-normal-logo.png" alt="" width="23" height="29">
+            <span class="sst-theme-name">Mint</span>
+          </button>
+          <button class="sst-theme-button" type="button" data-theme="mango" aria-pressed="false" style="color:#9E371A;background:#F0A80B;">
+            <img src="assets/mango-normal-logo.png" alt="" width="23" height="29">
+            <span class="sst-theme-name">Mango</span>
+          </button>
+          <button class="sst-theme-button" type="button" data-theme="peach" aria-pressed="false" style="color:#9E243D;background:#FFF5AD;">
+            <img src="assets/peach-normal-logo.png" alt="" width="23" height="29">
+            <span class="sst-theme-name">Peach</span>
+          </button>
           <button class="sst-invert-button" id="sst-invert" type="button" aria-pressed="false" aria-label="Invert foreground and background colors">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="m7 23-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
             <span class="sst-theme-name">Invert</span>
@@ -1249,10 +1261,10 @@ svg {
           <div id="sst-copy-area">
             <table id="sst-signature-table" role="presentation" border="0" cellpadding="0" cellspacing="0" width="594" style="width:594px;table-layout:fixed;border-collapse:separate;border-spacing:0;background-color:#CDAF32;border-radius:20px;color:#6C3520;font-family:Arial,Helvetica,sans-serif;">
               <tr>
-                <td width="119" valign="middle" style="box-sizing:border-box;width:119px;padding:18px 0 17px 18px;vertical-align:middle;">
-                  <img id="sst-signature-logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="100" height="100" alt="Spraga" style="display:block;width:100px;height:100px;min-width:100px;max-width:100px;min-height:100px;max-height:100px;border:0;outline:none;text-decoration:none;">
+                <td width="131" valign="middle" style="box-sizing:border-box;width:131px;padding:18px 0 17px 18px;vertical-align:middle;">
+                  <img id="sst-signature-logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="112" height="112" alt="Spraga" style="display:block;width:112px;height:112px;min-width:112px;max-width:112px;min-height:112px;max-height:112px;border:0;outline:none;text-decoration:none;">
                 </td>
-                <td width="475" valign="top" style="box-sizing:border-box;width:475px;padding:23px 12px 22px 17px;vertical-align:top;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
+                <td width="463" valign="top" style="box-sizing:border-box;width:463px;padding:23px 12px 22px 17px;vertical-align:top;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
                   <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:100%;border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
                     <tr>
                       <td id="sst-signature-name" style="padding:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;line-height:19px;letter-spacing:0;white-space:nowrap;opacity:0.48;" data-signature-color>YOUR NAME</td>
@@ -1358,7 +1370,7 @@ svg {
 
     // Image URLs must be real, public HTTPS resources, not data: or file: URLs.
     // Once this whole folder is deployed, these paths automatically point to the same deployment.
-    const ASSET_FILES = {"original":{"normal":{"icons":{"phone":"original-normal-phone.png","website":"original-normal-website.png","instagram":"original-normal-instagram.png","linkedin":"original-normal-linkedin.png"},"logo":"original-normal-logo.png"},"inverted":{"icons":{"phone":"original-inverted-phone.png","website":"original-inverted-website.png","instagram":"original-inverted-instagram.png","linkedin":"original-inverted-linkedin.png"},"logo":"original-inverted-logo.png"}},"lemon":{"normal":{"icons":{"phone":"lemon-normal-phone.png","website":"lemon-normal-website.png","instagram":"lemon-normal-instagram.png","linkedin":"lemon-normal-linkedin.png"},"logo":"lemon-normal-logo.png"},"inverted":{"icons":{"phone":"lemon-inverted-phone.png","website":"lemon-inverted-website.png","instagram":"lemon-inverted-instagram.png","linkedin":"lemon-inverted-linkedin.png"},"logo":"lemon-inverted-logo.png"}},"pomegranate":{"normal":{"icons":{"phone":"pomegranate-normal-phone.png","website":"pomegranate-normal-website.png","instagram":"pomegranate-normal-instagram.png","linkedin":"pomegranate-normal-linkedin.png"},"logo":"pomegranate-normal-logo.png"},"inverted":{"icons":{"phone":"pomegranate-inverted-phone.png","website":"pomegranate-inverted-website.png","instagram":"pomegranate-inverted-instagram.png","linkedin":"pomegranate-inverted-linkedin.png"},"logo":"pomegranate-inverted-logo.png"}},"apple":{"normal":{"icons":{"phone":"apple-normal-phone.png","website":"apple-normal-website.png","instagram":"apple-normal-instagram.png","linkedin":"apple-normal-linkedin.png"},"logo":"apple-normal-logo.png"},"inverted":{"icons":{"phone":"apple-inverted-phone.png","website":"apple-inverted-website.png","instagram":"apple-inverted-instagram.png","linkedin":"apple-inverted-linkedin.png"},"logo":"apple-inverted-logo.png"}}};
+    const ASSET_FILES = {"original":{"normal":{"icons":{"phone":"original-normal-phone.png","website":"original-normal-website.png","instagram":"original-normal-instagram.png","linkedin":"original-normal-linkedin.png"},"logo":"original-normal-logo-448.png"},"inverted":{"icons":{"phone":"original-inverted-phone.png","website":"original-inverted-website.png","instagram":"original-inverted-instagram.png","linkedin":"original-inverted-linkedin.png"},"logo":"original-inverted-logo-448.png"}},"lemon":{"normal":{"icons":{"phone":"lemon-normal-phone.png","website":"lemon-normal-website.png","instagram":"lemon-normal-instagram.png","linkedin":"lemon-normal-linkedin.png"},"logo":"lemon-normal-logo-448.png"},"inverted":{"icons":{"phone":"lemon-inverted-phone.png","website":"lemon-inverted-website.png","instagram":"lemon-inverted-instagram.png","linkedin":"lemon-inverted-linkedin.png"},"logo":"lemon-inverted-logo-448.png"}},"pomegranate":{"normal":{"icons":{"phone":"pomegranate-normal-phone.png","website":"pomegranate-normal-website.png","instagram":"pomegranate-normal-instagram.png","linkedin":"pomegranate-normal-linkedin.png"},"logo":"pomegranate-normal-logo-448.png"},"inverted":{"icons":{"phone":"pomegranate-inverted-phone.png","website":"pomegranate-inverted-website.png","instagram":"pomegranate-inverted-instagram.png","linkedin":"pomegranate-inverted-linkedin.png"},"logo":"pomegranate-inverted-logo-448.png"}},"apple":{"normal":{"icons":{"phone":"apple-normal-phone.png","website":"apple-normal-website.png","instagram":"apple-normal-instagram.png","linkedin":"apple-normal-linkedin.png"},"logo":"apple-normal-logo-448.png"},"inverted":{"icons":{"phone":"apple-inverted-phone.png","website":"apple-inverted-website.png","instagram":"apple-inverted-instagram.png","linkedin":"apple-inverted-linkedin.png"},"logo":"apple-inverted-logo-448.png"}},"mint":{"normal":{"icons":{"phone":"mint-normal-phone.png","website":"mint-normal-website.png","instagram":"mint-normal-instagram.png","linkedin":"mint-normal-linkedin.png"},"logo":"mint-normal-logo.png"},"inverted":{"icons":{"phone":"mint-inverted-phone.png","website":"mint-inverted-website.png","instagram":"mint-inverted-instagram.png","linkedin":"mint-inverted-linkedin.png"},"logo":"mint-inverted-logo.png"}},"mango":{"normal":{"icons":{"phone":"mango-normal-phone.png","website":"mango-normal-website.png","instagram":"mango-normal-instagram.png","linkedin":"mango-normal-linkedin.png"},"logo":"mango-normal-logo.png"},"inverted":{"icons":{"phone":"mango-inverted-phone.png","website":"mango-inverted-website.png","instagram":"mango-inverted-instagram.png","linkedin":"mango-inverted-linkedin.png"},"logo":"mango-inverted-logo.png"}},"peach":{"normal":{"icons":{"phone":"peach-normal-phone.png","website":"peach-normal-website.png","instagram":"peach-normal-instagram.png","linkedin":"peach-normal-linkedin.png"},"logo":"peach-normal-logo.png"},"inverted":{"icons":{"phone":"peach-inverted-phone.png","website":"peach-inverted-website.png","instagram":"peach-inverted-instagram.png","linkedin":"peach-inverted-linkedin.png"},"logo":"peach-inverted-logo.png"}}};
     const assetUrl = filename => new URL("./assets/" + filename, document.baseURI).href;
     const EMAIL_ASSETS = Object.fromEntries(
       Object.entries(ASSET_FILES).map(([theme, variants]) => [theme,
@@ -1372,7 +1384,10 @@ svg {
       original: { label: "Original", background: "#CDAF32", foreground: "#6C3520" },
       lemon: { label: "Lemon", background: "#F0EA35", foreground: "#366132" },
       pomegranate: { label: "Granate", background: "#EA89A8", foreground: "#7C124C" },
-      apple: { label: "Apple", background: "#69AC3E", foreground: "#042F20" }
+      apple: { label: "Apple", background: "#69AC3E", foreground: "#042F20" },
+      mint: { label: "Mint", background: "#D6F6B3", foreground: "#E20303" },
+      mango: { label: "Mango", background: "#F0A80B", foreground: "#9E371A" },
+      peach: { label: "Peach", background: "#FFF5AD", foreground: "#9E243D" }
     };
 
     let selectedTheme = "original";
@@ -1436,7 +1451,7 @@ svg {
       let size = baseSize;
       while (size > minimumSize) {
         context.font = weight + " " + size + "px Arial";
-        if (context.measureText(text).width <= 440) break;
+        if (context.measureText(text).width <= 428) break;
         size -= 0.5;
       }
       node.style.fontSize = size + "px";
@@ -1579,11 +1594,11 @@ svg {
       const factor = Math.min(1, Math.max(0.25, availableWidth / 594));
       scaleBox.style.transform = "scale(" + factor + ")";
       scaleBox.style.width = (594 * factor) + "px";
-      scaleBox.style.height = (135 * factor) + "px";
+      scaleBox.style.height = (147 * factor) + "px";
     }
 
     // Never paste SVG or base64 PNG sources into Gmail: email sanitizers can remove them.
-    // A placeholder marks the *same 100px cell* for a native Gmail image upload.
+    // A placeholder marks the *same 112px cell* for a native Gmail image upload.
     function buildCopyTable() {
       const table = el("sst-signature-table").cloneNode(true);
       table.querySelectorAll("img").forEach(image => {
@@ -1591,7 +1606,7 @@ svg {
         // Explicit intrinsic and CSS sizes stop Safari / Gmail resizing them.
         const original = document.getElementById(image.id);
         image.src = original.src;
-        const width = image.id === "sst-signature-logo" ? 100 : 15;
+        const width = image.id === "sst-signature-logo" ? 112 : 15;
         image.setAttribute("width", String(width));
         image.setAttribute("height", String(width));
         image.style.width = width + "px";
