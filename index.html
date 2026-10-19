@@ -969,6 +969,13 @@ svg {
   #spraga-signature-tool .sst-preview-head { border-bottom: 1px solid var(--border); }
   #spraga-signature-tool .sst-actions { border-top: 1px solid var(--border); }
 
+  #spraga-signature-tool .sst-email-note {
+    padding: 0 16px 14px;
+    color: var(--muted-foreground);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
   #spraga-signature-tool .sst-preview-title { font-weight: 500; }
 
   #spraga-signature-tool .sst-theme-status {
@@ -1345,6 +1352,7 @@ svg {
         </div>
         <span class="sst-status" id="sst-status" role="status" aria-live="polite"></span>
       </div>
+      <p class="sst-email-note">Email apps may adjust colors in dark mode. After installing, send a test email and check it in both light and dark mode. If you installed an older signature, copy and paste it again to get updates.</p>
     </section>
 
     <section class="sst-panel sst-guide" aria-labelledby="sst-guide-title">
@@ -1540,9 +1548,22 @@ svg {
       const variant = inverted ? "inverted" : "normal";
       const assets = EMAIL_ASSETS[selectedTheme][variant];
 
-      el("sst-signature-table").style.backgroundColor = background;
-      el("sst-signature-table").style.color = foreground;
-      root.querySelectorAll("[data-signature-color]").forEach(node => { node.style.color = foreground; });
+      const table = el("sst-signature-table");
+      // Keep these protections inline: Gmail signature paste can discard <head>,
+      // stylesheets and dark-mode media queries. A solid gradient can retain the
+      // brand background in clients that recolor background-color. bgcolor and
+      // color remain fallbacks for clients (including classic Outlook) that
+      // ignore these CSS properties. No fragment can disable every mail app's
+      // dark-mode transformations; verify the received email in the target app.
+      table.setAttribute("bgcolor", background);
+      table.style.backgroundColor = background;
+      table.style.backgroundImage = "linear-gradient(" + background + ", " + background + ")";
+      [table, ...table.querySelectorAll("[data-signature-color]")].forEach(node => {
+        node.style.color = foreground;
+        // WebKit-based mail clients may override ordinary text colors. Gmail
+        // can still strip or transform this, so the received email needs a check.
+        node.style.setProperty("-webkit-text-fill-color", foreground, "important");
+      });
       el("sst-signature-logo").src = assets.logo;
       el("sst-phone-icon").src = assets.icons.phone;
       el("sst-website-icon").src = assets.icons.website;
@@ -1598,7 +1619,7 @@ svg {
     }
 
     // Never paste SVG or base64 PNG sources into Gmail: email sanitizers can remove them.
-    // A placeholder marks the *same 112px cell* for a native Gmail image upload.
+    // Clone the inline colors as well as the public image URLs for both copy paths.
     function buildCopyTable() {
       const table = el("sst-signature-table").cloneNode(true);
       table.querySelectorAll("img").forEach(image => {
