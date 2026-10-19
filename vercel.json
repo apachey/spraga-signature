@@ -1,4 +1,12 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "buildCommand": "npm run build",
+  "outputDirectory": "public",
+  "functions": {
+    "api/signature-image.js": {
+      "includeFiles": "{fonts,assets}/**",
+      "maxDuration": 10
+    }
+  }
 }

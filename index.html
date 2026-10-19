@@ -1027,6 +1027,7 @@ svg {
   }
 
   #spraga-signature-tool .sst-export-buttons { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  #spraga-signature-tool .sst-button:disabled { opacity:0.6; cursor:wait; }
   #spraga-signature-tool .sst-button-secondary { background:var(--secondary); color:var(--foreground); border:1px solid var(--border); }
   #spraga-signature-tool .sst-gmail-warning { margin-top:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; background:var(--muted); line-height:1.5; }
   #spraga-signature-tool .sst-status {
@@ -1191,7 +1192,7 @@ svg {
 
       <div class="sst-form-row">
         <label class="sst-label" for="sst-full-name">Full name <span class="sst-required" aria-hidden="true">*</span></label>
-        <input class="sst-control" id="sst-full-name" placeholder="e.g. Firstname Lastname" autocomplete="off" aria-required="true">
+        <input class="sst-control" id="sst-full-name" maxlength="160" placeholder="e.g. Firstname Lastname" autocomplete="off" aria-required="true">
       </div>
 
       <div class="sst-form-row sst-align-start">
@@ -1212,7 +1213,7 @@ svg {
 
       <div class="sst-form-row">
         <label class="sst-label" for="sst-phone">Phone number <span class="sst-optional">(optional)</span></label>
-        <input class="sst-control" id="sst-phone" placeholder="e.g. +33 6 12 34 56 78" inputmode="tel" autocomplete="off">
+        <input class="sst-control" id="sst-phone" maxlength="64" placeholder="e.g. +33 6 12 34 56 78" inputmode="tel" autocomplete="off">
       </div>
 
       <div class="sst-form-row sst-align-start">
@@ -1266,82 +1267,7 @@ svg {
       <div class="sst-preview-stage" id="sst-preview-stage">
         <div class="sst-signature-scale" id="sst-signature-scale">
           <div id="sst-copy-area">
-            <table id="sst-signature-table" role="presentation" border="0" cellpadding="0" cellspacing="0" width="594" style="width:594px;table-layout:fixed;border-collapse:separate;border-spacing:0;background-color:#CDAF32;border-radius:20px;color:#6C3520;font-family:Arial,Helvetica,sans-serif;">
-              <tr>
-                <td width="131" valign="middle" style="box-sizing:border-box;width:131px;padding:18px 0 17px 18px;vertical-align:middle;">
-                  <img id="sst-signature-logo" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="112" height="112" alt="Spraga" style="display:block;width:112px;height:112px;min-width:112px;max-width:112px;min-height:112px;max-height:112px;border:0;outline:none;text-decoration:none;">
-                </td>
-                <td width="463" valign="top" style="box-sizing:border-box;width:463px;padding:23px 12px 22px 17px;vertical-align:top;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="width:100%;border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                    <tr>
-                      <td id="sst-signature-name" style="padding:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:700;line-height:19px;letter-spacing:0;white-space:nowrap;opacity:0.48;" data-signature-color>YOUR NAME</td>
-                    </tr>
-                    <tr>
-                      <td id="sst-signature-role" style="padding:5px 0 0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;white-space:nowrap;opacity:0.48;" data-signature-color>POSITION / DIRECTION / COUNTRY</td>
-                    </tr>
-                    <tr><td height="11" style="height:11px;font-size:0;line-height:0;">&nbsp;</td></tr>
-                    <tr>
-                      <td style="padding:0 0 0 4px;font-size:0;line-height:0;">
-                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                          <tr>
-                            <td id="sst-contact-slot-1" width="140" valign="top" style="width:140px;padding:0;vertical-align:top;font-size:0;line-height:0;">
-                              <table id="sst-row-phone" role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                                <tr>
-                                  <td width="19" height="20" valign="middle" style="width:19px;height:20px;padding:0;vertical-align:middle;">
-                                    <a id="sst-phone-icon-link" href="tel:" style="display:inline-block;vertical-align:middle;color:#6C3520;text-decoration:none;font-size:0;font-weight:400;line-height:0;" data-signature-color><img id="sst-phone-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="15" height="15" alt="Phone" style="display:block;width:15px;height:15px;border:0;outline:none;"></a>
-                                  </td>
-                                  <td height="20" valign="middle" style="height:20px;padding:0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;white-space:nowrap;">
-                                    <a id="sst-phone-link" href="tel:" style="color:#6C3520;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;" data-signature-color>PHONE NUMBER</a>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td id="sst-contact-slot-2" valign="top" style="padding:0;vertical-align:top;font-size:0;line-height:0;">
-                              <table id="sst-row-website" role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                                <tr>
-                                  <td width="19" height="20" valign="middle" style="width:19px;height:20px;padding:0;vertical-align:middle;">
-                                    <a id="sst-website-icon-link" href="https://spraga.fr" target="_blank" style="display:inline-block;vertical-align:middle;color:#6C3520;text-decoration:none;font-size:0;font-weight:400;line-height:0;" data-signature-color><img id="sst-website-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="15" height="15" alt="Website" style="display:block;width:15px;height:15px;border:0;outline:none;"></a>
-                                  </td>
-                                  <td height="20" valign="middle" style="height:20px;padding:0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;white-space:nowrap;">
-                                    <a id="sst-website-link" href="https://spraga.fr" target="_blank" style="color:#6C3520;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;" data-signature-color>SPRAGA.FR</a>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td id="sst-contact-slot-3" width="140" valign="top" style="width:140px;padding:0;vertical-align:top;font-size:0;line-height:0;">
-                              <table id="sst-row-instagram" role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                                <tr>
-                                  <td width="19" height="20" valign="middle" style="width:19px;height:20px;padding:0;vertical-align:middle;">
-                                    <a id="sst-instagram-icon-link" href="https://www.instagram.com/spraga.fr/" target="_blank" style="display:inline-block;vertical-align:middle;color:#6C3520;text-decoration:none;font-size:0;font-weight:400;line-height:0;" data-signature-color><img id="sst-instagram-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="15" height="15" alt="Instagram" style="display:block;width:15px;height:15px;border:0;outline:none;"></a>
-                                  </td>
-                                  <td height="20" valign="middle" style="height:20px;padding:0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;white-space:nowrap;">
-                                    <a id="sst-instagram-link" href="https://www.instagram.com/spraga.fr/" target="_blank" style="color:#6C3520;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;" data-signature-color>@SPRAGA.FR</a>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td id="sst-contact-slot-4" valign="top" style="padding:0;vertical-align:top;font-size:0;line-height:0;">
-                              <table id="sst-row-linkedin" role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;color:#6C3520;font-family:Arial,Helvetica,sans-serif;" data-signature-color>
-                                <tr>
-                                  <td width="19" height="20" valign="middle" style="width:19px;height:20px;padding:0;vertical-align:middle;">
-                                    <a id="sst-linkedin-icon-link" href="https://www.linkedin.com/company/spraga" target="_blank" style="display:inline-block;vertical-align:middle;color:#6C3520;text-decoration:none;font-size:0;font-weight:400;line-height:0;" data-signature-color><img id="sst-linkedin-icon" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" width="15" height="15" alt="LinkedIn" style="display:block;width:15px;height:15px;border:0;outline:none;"></a>
-                                  </td>
-                                  <td height="20" valign="middle" style="height:20px;padding:0;vertical-align:middle;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;white-space:nowrap;">
-                                    <a id="sst-linkedin-link" href="https://www.linkedin.com/company/spraga" target="_blank" style="color:#6C3520;text-decoration:none;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;line-height:15px;letter-spacing:0;" data-signature-color>LINKEDIN</a>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
+            <table id="sst-signature-table" role="presentation"></table>
           </div>
         </div>
       </div>
@@ -1352,7 +1278,7 @@ svg {
         </div>
         <span class="sst-status" id="sst-status" role="status" aria-live="polite"></span>
       </div>
-      <p class="sst-email-note">Email apps may adjust colors in dark mode. After installing, send a test email and check it in both light and dark mode. If you installed an older signature, copy and paste it again to get updates.</p>
+      <p class="sst-email-note">All theme colors are included in the signature images. Phone, website and social links stay clickable. Text inside the images cannot be selected; if images are blocked, the email app may show alternative text. Copy and install the signature again after an update.</p>
     </section>
 
     <section class="sst-panel sst-guide" aria-labelledby="sst-guide-title">
@@ -1371,32 +1297,11 @@ svg {
   </div>
 </div>
 
-<script>
+<script type="module">
+  import { THEMES, PARTS, IMAGE_VERSION } from "./signature-config.js";
   (() => {
     const root = document.getElementById("spraga-signature-tool");
     if (!root) return;
-
-    // Image URLs must be real, public HTTPS resources, not data: or file: URLs.
-    // Once this whole folder is deployed, these paths automatically point to the same deployment.
-    const ASSET_FILES = {"original":{"normal":{"icons":{"phone":"original-normal-phone.png","website":"original-normal-website.png","instagram":"original-normal-instagram.png","linkedin":"original-normal-linkedin.png"},"logo":"original-normal-logo-448.png"},"inverted":{"icons":{"phone":"original-inverted-phone.png","website":"original-inverted-website.png","instagram":"original-inverted-instagram.png","linkedin":"original-inverted-linkedin.png"},"logo":"original-inverted-logo-448.png"}},"lemon":{"normal":{"icons":{"phone":"lemon-normal-phone.png","website":"lemon-normal-website.png","instagram":"lemon-normal-instagram.png","linkedin":"lemon-normal-linkedin.png"},"logo":"lemon-normal-logo-448.png"},"inverted":{"icons":{"phone":"lemon-inverted-phone.png","website":"lemon-inverted-website.png","instagram":"lemon-inverted-instagram.png","linkedin":"lemon-inverted-linkedin.png"},"logo":"lemon-inverted-logo-448.png"}},"pomegranate":{"normal":{"icons":{"phone":"pomegranate-normal-phone.png","website":"pomegranate-normal-website.png","instagram":"pomegranate-normal-instagram.png","linkedin":"pomegranate-normal-linkedin.png"},"logo":"pomegranate-normal-logo-448.png"},"inverted":{"icons":{"phone":"pomegranate-inverted-phone.png","website":"pomegranate-inverted-website.png","instagram":"pomegranate-inverted-instagram.png","linkedin":"pomegranate-inverted-linkedin.png"},"logo":"pomegranate-inverted-logo-448.png"}},"apple":{"normal":{"icons":{"phone":"apple-normal-phone.png","website":"apple-normal-website.png","instagram":"apple-normal-instagram.png","linkedin":"apple-normal-linkedin.png"},"logo":"apple-normal-logo-448.png"},"inverted":{"icons":{"phone":"apple-inverted-phone.png","website":"apple-inverted-website.png","instagram":"apple-inverted-instagram.png","linkedin":"apple-inverted-linkedin.png"},"logo":"apple-inverted-logo-448.png"}},"mint":{"normal":{"icons":{"phone":"mint-normal-phone.png","website":"mint-normal-website.png","instagram":"mint-normal-instagram.png","linkedin":"mint-normal-linkedin.png"},"logo":"mint-normal-logo.png"},"inverted":{"icons":{"phone":"mint-inverted-phone.png","website":"mint-inverted-website.png","instagram":"mint-inverted-instagram.png","linkedin":"mint-inverted-linkedin.png"},"logo":"mint-inverted-logo.png"}},"mango":{"normal":{"icons":{"phone":"mango-normal-phone.png","website":"mango-normal-website.png","instagram":"mango-normal-instagram.png","linkedin":"mango-normal-linkedin.png"},"logo":"mango-normal-logo.png"},"inverted":{"icons":{"phone":"mango-inverted-phone.png","website":"mango-inverted-website.png","instagram":"mango-inverted-instagram.png","linkedin":"mango-inverted-linkedin.png"},"logo":"mango-inverted-logo.png"}},"peach":{"normal":{"icons":{"phone":"peach-normal-phone.png","website":"peach-normal-website.png","instagram":"peach-normal-instagram.png","linkedin":"peach-normal-linkedin.png"},"logo":"peach-normal-logo.png"},"inverted":{"icons":{"phone":"peach-inverted-phone.png","website":"peach-inverted-website.png","instagram":"peach-inverted-instagram.png","linkedin":"peach-inverted-linkedin.png"},"logo":"peach-inverted-logo.png"}}};
-    const assetUrl = filename => new URL("./assets/" + filename, document.baseURI).href;
-    const EMAIL_ASSETS = Object.fromEntries(
-      Object.entries(ASSET_FILES).map(([theme, variants]) => [theme,
-        Object.fromEntries(Object.entries(variants).map(([variant, files]) => [variant, {
-          logo: assetUrl(files.logo),
-          icons: Object.fromEntries(Object.entries(files.icons).map(([name, filename]) => [name, assetUrl(filename)]))
-        }]))
-      ])
-    );;
-    const THEMES = {
-      original: { label: "Original", background: "#CDAF32", foreground: "#6C3520" },
-      lemon: { label: "Lemon", background: "#F0EA35", foreground: "#366132" },
-      pomegranate: { label: "Granate", background: "#EA89A8", foreground: "#7C124C" },
-      apple: { label: "Apple", background: "#69AC3E", foreground: "#042F20" },
-      mint: { label: "Mint", background: "#D6F6B3", foreground: "#E20303" },
-      mango: { label: "Mango", background: "#F0A80B", foreground: "#9E371A" },
-      peach: { label: "Peach", background: "#FFF5AD", foreground: "#9E243D" }
-    };
 
     let selectedTheme = "original";
     let inverted = false;
@@ -1408,8 +1313,6 @@ svg {
     const nameInput = el("sst-full-name");
     const roleEditor = el("sst-role-editor");
     const phoneInput = el("sst-phone");
-    const signatureName = el("sst-signature-name");
-    const signatureRole = el("sst-signature-role");
     const status = el("sst-status");
     const roleField = roleEditor.closest(".sst-rich-field");
     let validationActive = false;
@@ -1445,70 +1348,121 @@ svg {
       return output.innerHTML.replace(/<br\s*\/?>/gi, " ");
     }
 
-    function setLinkPair(textId, iconId, text, href) {
-      const textLink = el(textId);
-      const iconLink = el(iconId);
-      textLink.textContent = text;
-      textLink.setAttribute("href", href);
-      iconLink.setAttribute("href", href);
-    }
+    let previewTimer;
 
-    function fitText(node, text, baseSize, minimumSize, weight) {
-      const canvas = fitText.canvas || (fitText.canvas = document.createElement("canvas"));
-      const context = canvas.getContext("2d");
-      let size = baseSize;
-      while (size > minimumSize) {
-        context.font = weight + " " + size + "px Arial";
-        if (context.measureText(text).width <= 428) break;
-        size -= 0.5;
+    function roleRuns() {
+      const source = document.createElement("div");
+      source.innerHTML = sanitizeRole(roleEditor.innerHTML);
+      const runs = [];
+      function visit(node, format = {}) {
+        if (node.nodeType === Node.TEXT_NODE) {
+          if (node.textContent) runs.push({ text: node.textContent, ...format });
+          return;
+        }
+        const next = { ...format };
+        if (["B", "STRONG"].includes(node.nodeName)) next.bold = true;
+        if (["I", "EM"].includes(node.nodeName)) next.italic = true;
+        if (node.nodeName === "U") next.underline = true;
+        if (["S", "STRIKE"].includes(node.nodeName)) next.strike = true;
+        node.childNodes.forEach(child => visit(child, next));
       }
-      node.style.fontSize = size + "px";
+      visit(source);
+      // Merge adjacent runs with the same format to keep email image URLs short.
+      return runs.reduce((result, run) => {
+        const previous = result.at(-1);
+        if (previous && ["bold", "italic", "underline", "strike"].every(key => previous[key] === run[key])) previous.text += run.text;
+        else result.push(run);
+        return result;
+      }, []);
     }
 
-    function packContactRows(hasPhone) {
-      const slots = [1, 2, 3, 4].map(index => el("sst-contact-slot-" + index));
-      const rows = [
-        { node: el("sst-row-phone"), visible: hasPhone },
-        { node: el("sst-row-website"), visible: true },
-        { node: el("sst-row-instagram"), visible: true },
-        { node: el("sst-row-linkedin"), visible: true }
-      ];
-      const activeRows = rows.filter(item => item.visible);
-      const inactiveRows = rows.filter(item => !item.visible);
+    function signatureImage(part, options = {}) {
+      const url = new URL("./api/signature-image", document.baseURI);
+      url.searchParams.set("v", IMAGE_VERSION);
+      url.searchParams.set("theme", selectedTheme);
+      url.searchParams.set("i", inverted ? "1" : "0");
+      url.searchParams.set("part", part);
+      Object.entries(options).forEach(([key, value]) => url.searchParams.set(key, value));
+      return url.href;
+    }
 
-      rows.forEach(item => item.node.remove());
-      slots.forEach(slot => { slot.style.display = "none"; });
-      activeRows.forEach((item, index) => {
-        slots[index].appendChild(item.node);
-        slots[index].style.display = "table-cell";
+    function refreshPreview() {
+      clearTimeout(previewTimer);
+      const name = clean(nameInput.value) || "YOUR NAME";
+      const runs = roleRuns();
+      const role = runs.map(run => run.text).join("");
+      const phone = clean(phoneInput.value);
+      const key = JSON.stringify([selectedTheme, inverted, name, runs, phone]);
+      const current = el("sst-signature-table");
+      if (current.signatureKey === key) return current;
+      const table = document.createElement("table");
+      table.id = "sst-signature-table";
+      table.setAttribute("role", "presentation");
+      table.setAttribute("width", "594");
+      table.setAttribute("border", "0");
+      table.setAttribute("cellpadding", "0");
+      table.setAttribute("cellspacing", "0");
+      // Auto layout also respects the image/cell widths if a mail editor removes colgroup.
+      table.style.cssText = "width:594px;height:147px;table-layout:auto;border-collapse:collapse;border-spacing:0;font-size:0;line-height:0;";
+      const columns = document.createElement("colgroup");
+      [148, 144, 302].forEach(width => {
+        const column = document.createElement("col");
+        column.setAttribute("width", width);
+        column.style.width = width + "px";
+        columns.appendChild(column);
       });
-      inactiveRows.forEach(item => slots[3].appendChild(item.node));
+      table.appendChild(columns);
+      table.signatureKey = key;
+      table.signaturePlainText = [name, role, phone, "https://spraga.fr", "https://www.instagram.com/spraga.fr/", "https://www.linkedin.com/company/spraga"].filter(Boolean).join("\n");
+      const contacts = [
+        ...(phone ? [{ kind: "phone", text: phone, href: phoneHref(phone) }] : []),
+        { kind: "website", text: "SPRAGA.FR", href: "https://spraga.fr" },
+        { kind: "instagram", text: "@SPRAGA.FR", href: "https://www.instagram.com/spraga.fr/" },
+        { kind: "linkedin", text: "LINKEDIN", href: "https://www.linkedin.com/company/spraga" }
+      ];
+      function cell(row, partName, alt, options = {}, href) {
+        const part = PARTS[partName];
+        const td = row.insertCell();
+        td.setAttribute("width", part.width);
+        td.setAttribute("height", part.height);
+        td.setAttribute("valign", "top");
+        td.style.cssText = "padding:0;border:0;vertical-align:top;font-size:0;line-height:0;";
+        const image = document.createElement("img");
+        image.src = signatureImage(partName, options);
+        image.alt = alt;
+        image.width = part.width;
+        image.height = part.height;
+        image.style.cssText = "display:block;width:" + part.width + "px;height:" + part.height + "px;border:0;outline:none;";
+        if (href) {
+          const link = document.createElement("a");
+          link.href = href;
+          link.style.cssText = "display:block;text-decoration:none;font-size:0;line-height:0;";
+          link.appendChild(image);
+          td.appendChild(link);
+        } else td.appendChild(image);
+        return td;
+      }
+      const top = table.insertRow();
+      cell(top, "left", "Spraga", {}, "https://spraga.fr").rowSpan = 4;
+      cell(top, "header", name + (role ? " — " + role : ""), { n: name, r: JSON.stringify(runs.length ? runs : [{ text: "POSITION / DIRECTION / COUNTRY" }]) }).colSpan = 2;
+      for (let row = 0; row < 2; row++) {
+        const tr = table.insertRow();
+        for (let column = 0; column < 2; column++) {
+          const slot = row * 2 + column;
+          const contact = contacts[slot];
+          cell(tr, "contact" + slot, contact?.text || "", {
+            c: contact?.kind || "empty", ...(contact?.kind === "phone" ? { p: phone } : {})
+          }, contact?.href);
+        }
+      }
+      cell(table.insertRow(), "footer", "").colSpan = 2;
+      current.replaceWith(table);
+      return table;
     }
 
     function updateFields() {
-      const name = clean(nameInput.value);
-      const roleHtml = sanitizeRole(roleEditor.innerHTML);
-      const roleText = clean(roleEditor.textContent).replace(/\s+/g, " ");
-      const phone = clean(phoneInput.value);
-
-      const previewName = name || "YOUR NAME";
-      const previewRole = roleText || "POSITION / DIRECTION / COUNTRY";
-
-      signatureName.textContent = previewName;
-      signatureRole.innerHTML = roleText ? roleHtml : previewRole;
-      signatureName.style.opacity = name ? "1" : "0.48";
-      signatureRole.style.opacity = roleText ? "1" : "0.48";
-      fitText(signatureName, previewName, 16, 13, "700");
-      fitText(signatureRole, previewRole, 12, 10, "400");
-
-      setLinkPair("sst-phone-link", "sst-phone-icon-link", phone, phoneHref(phone));
-      setLinkPair("sst-website-link", "sst-website-icon-link", "SPRAGA.FR", "https://spraga.fr");
-      setLinkPair("sst-instagram-link", "sst-instagram-icon-link", "@SPRAGA.FR", "https://www.instagram.com/spraga.fr/");
-
-      el("sst-row-phone").style.display = phone ? "table" : "none";
-      el("sst-row-website").style.display = "table";
-      el("sst-row-instagram").style.display = "table";
-      packContactRows(Boolean(phone));
+      clearTimeout(previewTimer);
+      previewTimer = setTimeout(refreshPreview, 180);
       if (validationActive) validateRequired(false);
       else setStatus("");
     }
@@ -1545,30 +1499,8 @@ svg {
       const theme = THEMES[selectedTheme];
       const background = inverted ? theme.foreground : theme.background;
       const foreground = inverted ? theme.background : theme.foreground;
-      const variant = inverted ? "inverted" : "normal";
-      const assets = EMAIL_ASSETS[selectedTheme][variant];
 
-      const table = el("sst-signature-table");
-      // Keep these protections inline: Gmail signature paste can discard <head>,
-      // stylesheets and dark-mode media queries. A solid gradient can retain the
-      // brand background in clients that recolor background-color. bgcolor and
-      // color remain fallbacks for clients (including classic Outlook) that
-      // ignore these CSS properties. No fragment can disable every mail app's
-      // dark-mode transformations; verify the received email in the target app.
-      table.setAttribute("bgcolor", background);
-      table.style.backgroundColor = background;
-      table.style.backgroundImage = "linear-gradient(" + background + ", " + background + ")";
-      [table, ...table.querySelectorAll("[data-signature-color]")].forEach(node => {
-        node.style.color = foreground;
-        // WebKit-based mail clients may override ordinary text colors. Gmail
-        // can still strip or transform this, so the received email needs a check.
-        node.style.setProperty("-webkit-text-fill-color", foreground, "important");
-      });
-      el("sst-signature-logo").src = assets.logo;
-      el("sst-phone-icon").src = assets.icons.phone;
-      el("sst-website-icon").src = assets.icons.website;
-      el("sst-instagram-icon").src = assets.icons.instagram;
-      el("sst-linkedin-icon").src = assets.icons.linkedin;
+      refreshPreview();
 
       root.querySelectorAll("[data-theme]").forEach(button => {
         button.setAttribute("aria-pressed", String(button.dataset.theme === selectedTheme));
@@ -1618,27 +1550,28 @@ svg {
       scaleBox.style.height = (147 * factor) + "px";
     }
 
-    // Never paste SVG or base64 PNG sources into Gmail: email sanitizers can remove them.
-    // Clone the inline colors as well as the public image URLs for both copy paths.
-    function buildCopyTable() {
-      const table = el("sst-signature-table").cloneNode(true);
-      table.querySelectorAll("img").forEach(image => {
-        // The preview images are already the remote HTTPS assets used for copying.
-        // Explicit intrinsic and CSS sizes stop Safari / Gmail resizing them.
-        const original = document.getElementById(image.id);
-        image.src = original.src;
-        const width = image.id === "sst-signature-logo" ? 112 : 15;
-        image.setAttribute("width", String(width));
-        image.setAttribute("height", String(width));
-        image.style.width = width + "px";
-        image.style.height = width + "px";
-        image.style.minWidth = width + "px";
-        image.style.maxWidth = width + "px";
-        image.style.minHeight = width + "px";
-        image.style.maxHeight = width + "px";
-        image.style.display = "block";
-      });
-      return table;
+    function buildCopyTable(table) {
+      const copy = table.cloneNode(true);
+      copy.signaturePlainText = table.signaturePlainText;
+      return copy;
+    }
+
+    async function imagesReady(table) {
+      const loaded = await Promise.all(Array.from(table.querySelectorAll("img"), image => {
+        if (image.complete) return image.naturalWidth > 0;
+        return new Promise(resolve => {
+          const done = () => {
+            clearTimeout(timeout);
+            image.removeEventListener("load", done);
+            image.removeEventListener("error", done);
+            resolve(image.naturalWidth > 0);
+          };
+          const timeout = setTimeout(done, 15000);
+          image.addEventListener("load", done);
+          image.addEventListener("error", done);
+        });
+      }));
+      return loaded.every(Boolean);
     }
 
     function copyWithSelection(table) {
@@ -1651,8 +1584,16 @@ svg {
       range.selectNodeContents(temp);
       selection.removeAllRanges();
       selection.addRange(range);
+      const onCopy = event => {
+        if (!event.clipboardData) return;
+        event.clipboardData.setData("text/html", table.outerHTML);
+        event.clipboardData.setData("text/plain", table.signaturePlainText);
+        event.preventDefault();
+      };
+      document.addEventListener("copy", onCopy);
       let copied = false;
       try { copied = document.execCommand("copy"); } catch (_) { copied = false; }
+      finally { document.removeEventListener("copy", onCopy); }
       selection.removeAllRanges();
       temp.remove();
       return copied;
@@ -1661,7 +1602,7 @@ svg {
     async function copyWithClipboardApi(table) {
       if (!navigator.clipboard || !navigator.clipboard.write || typeof ClipboardItem === "undefined") return false;
       const html = table.outerHTML;
-      const plain = table.textContent.replace(/\n{3,}/g, "\n\n").trim();
+      const plain = table.signaturePlainText;
       try {
         const item = new ClipboardItem({
           "text/html": new Blob([html], { type: "text/html" }),
@@ -1684,15 +1625,26 @@ svg {
         setStatus("Open the team's published HTTPS generator link to copy the signature.", true);
         return;
       }
-      const visibleImages = Array.from(el("sst-signature-table").querySelectorAll("img"))
-        .filter(img => img.getClientRects().length > 0);
-      const invalid = visibleImages.some(img => !img.src.startsWith("https://") || !img.complete || img.naturalWidth === 0);
-      if (invalid) {
-        setStatus("Some signature images are still loading or unavailable. Refresh this page and try again.", true);
+      const preview = refreshPreview();
+      if (clean(nameInput.value).length > 160 || clean(roleEditor.textContent).length > 300 || clean(phoneInput.value).length > 64 || roleRuns().length > 64) {
+        setStatus("Shorten the name, position or phone number before copying.", true);
+        return;
+      }
+      const button = el("sst-copy");
+      button.disabled = true;
+      setStatus("Preparing signature images…");
+      const ready = await imagesReady(preview);
+      button.disabled = false;
+      if (!ready) {
+        setStatus("Some signature images are unavailable. Refresh this page and try again.", true);
+        return;
+      }
+      if (preview !== el("sst-signature-table")) {
+        setStatus("Details changed while loading. Click Copy signature again.", true);
         return;
       }
       setStatus("Copying…");
-      const table = buildCopyTable();
+      const table = buildCopyTable(preview);
       let copied = await copyWithClipboardApi(table);
       if (!copied) copied = copyWithSelection(table);
       setStatus(copied
